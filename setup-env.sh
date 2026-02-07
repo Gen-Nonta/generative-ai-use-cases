@@ -13,7 +13,8 @@ else
     env=$(cat packages/cdk/cdk.json | jq -r '.context.env')
 fi
 
-STACK_NAME="GenerativeAiUseCasesStack${env}"
+# STACK_NAME="GenerativeAiUseCasesStack${env}"
+STACK_NAME="GensGenU${env}"
 echo "Using stack output for $STACK_NAME"
 
 function extract_value {

@@ -239,7 +239,8 @@ export const createStacks = (app: cdk.App, params: ProcessedStackInput) => {
 
   const generativeAiUseCasesStack = new GenerativeAiUseCasesStack(
     app,
-    `GenerativeAiUseCasesStack${updatedParams.env}`,
+    //`GenerativeAiUseCasesStack${updatedParams.env}`,
+    `GensGenU${updatedParams.env}`,
     {
       env: {
         account: updatedParams.account,

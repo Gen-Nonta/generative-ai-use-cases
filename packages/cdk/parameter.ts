@@ -23,6 +23,39 @@ const envs: Record<string, Partial<StackInput>> = {
   // },
   dev: {
     // Parameters for development environment
+    modelRegion: 'us-west-2',
+    modelIds: [
+      'global.anthropic.claude-sonnet-4-5-20250929-v1:0',
+      'global.anthropic.claude-haiku-4-5-20251001-v1:0',
+      'global.anthropic.claude-opus-4-5-20251101-v1:0',
+      'amazon.nova-pro-v1:0',
+      'amazon.nova-lite-v1:0',
+      'amazon.nova-micro-v1:0',
+      'global.amazon.nova-2-lite-v1:0',
+      'us.amazon.nova-premier-v1:0',
+      //'amazon.titan-text-premier-v1:0',
+      'openai.gpt-oss-120b-1:0',
+      'openai.gpt-oss-20b-1:0',
+      'google.gemma-3-4b-it',
+      'google.gemma-3-12b-it',
+      'google.gemma-3-27b-it',
+      'deepseek.v3-v1:0',
+      'us.deepseek.r1-v1:0',
+    ],
+    imageGenerationModelIds: [
+      { modelId: 'amazon.nova-canvas-v1:0', region: 'us-east-1' },
+      'stability.sd3-5-large-v1:0',
+      'stability.stable-image-core-v1:1',
+      'stability.stable-image-ultra-v1:1',
+      //'stability.stable-diffusion-xl-v1',
+    ],
+    videoGenerationModelIds: [
+      { modelId: 'amazon.nova-reel-v1:0', region: 'us-east-1' },
+      { modelId: 'amazon.nova-reel-v1:1', region: 'us-east-1' },
+      'luma.ray-v2:0',
+    ],
+    speechToSpeechModelIds: ['amazon.nova-sonic-v1:0'],
+    selfSignUpEnabled: false,
   },
   staging: {
     // Parameters for staging environment

@@ -22,6 +22,7 @@ const envs: Record<string, Partial<StackInput>> = {
   //   // If you want to override the default settings, add the following
   // },
   dev: {
+    selfSignUpEnabled: false,
     // Parameters for development environment
     selfSignUpEnabled: false,
     modelRegion: 'us-west-2',

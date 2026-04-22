@@ -23,12 +23,80 @@ const envs: Record<string, Partial<StackInput>> = {
   // },
   dev: {
     // Parameters for development environment
+    selfSignUpEnabled: false,
+    modelRegion: 'us-west-2',
+    modelIds: [
+      'global.anthropic.claude-sonnet-4-6',
+      'global.anthropic.claude-haiku-4-5-20251001-v1:0',
+      'global.anthropic.claude-opus-4-6-v1',
+      //'global.anthropic.claude-opus-4-7',
+      'us.amazon.nova-pro-v1:0',
+      'us.amazon.nova-lite-v1:0',
+      'us.amazon.nova-micro-v1:0',
+      'global.amazon.nova-2-lite-v1:0',
+      'openai.gpt-oss-120b-1:0',
+      'openai.gpt-oss-20b-1:0',
+      'google.gemma-3-4b-it',
+      'google.gemma-3-12b-it',
+      'google.gemma-3-27b-it',
+      //'deepseek.v3.2',
+      'deepseek.v3-v1:0',
+      'us.deepseek.r1-v1:0',
+    ],
+    imageGenerationModelIds: [
+      { modelId: 'amazon.nova-canvas-v1:0', region: 'us-east-1' },
+      'stability.sd3-5-large-v1:0',
+      'stability.stable-image-core-v1:1',
+      'stability.stable-image-ultra-v1:1',
+    ],
+    videoGenerationModelIds: [
+      { modelId: 'amazon.nova-reel-v1:1', region: 'us-east-1' },
+    ],
+    speechToSpeechModelIds: [
+      'amazon.nova-2-sonic-v1:0',
+      { modelId: 'amazon.nova-sonic-v1:0', region: 'ap-northeast-1' },
+    ],
+    // selfSignUpEnabled: false,
   },
   staging: {
     // Parameters for staging environment
   },
   prod: {
-    // Parameters for production environment
+    // Parameters for development environment
+    selfSignUpEnabled: false,
+    modelRegion: 'us-west-2',
+    modelIds: [
+      'global.anthropic.claude-sonnet-4-6',
+      'global.anthropic.claude-haiku-4-5-20251001-v1:0',
+      'global.anthropic.claude-opus-4-6-v1',
+      //'global.anthropic.claude-opus-4-7',
+      'us.amazon.nova-pro-v1:0',
+      'us.amazon.nova-lite-v1:0',
+      'us.amazon.nova-micro-v1:0',
+      'global.amazon.nova-2-lite-v1:0',
+      'openai.gpt-oss-120b-1:0',
+      'openai.gpt-oss-20b-1:0',
+      'google.gemma-3-4b-it',
+      'google.gemma-3-12b-it',
+      'google.gemma-3-27b-it',
+      //'deepseek.v3.2',
+      'deepseek.v3-v1:0',
+      'us.deepseek.r1-v1:0',
+    ],
+    imageGenerationModelIds: [
+      { modelId: 'amazon.nova-canvas-v1:0', region: 'us-east-1' },
+      'stability.sd3-5-large-v1:0',
+      'stability.stable-image-core-v1:1',
+      'stability.stable-image-ultra-v1:1',
+    ],
+    videoGenerationModelIds: [
+      { modelId: 'amazon.nova-reel-v1:1', region: 'us-east-1' },
+    ],
+    speechToSpeechModelIds: [
+      'amazon.nova-2-sonic-v1:0',
+      { modelId: 'amazon.nova-sonic-v1:0', region: 'ap-northeast-1' },
+    ],
+    // selfSignUpEnabled: false,
   },
   // If you need other environments, customize them as needed
 };
